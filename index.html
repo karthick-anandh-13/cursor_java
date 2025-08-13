@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Execution Explained - Java, Python, C, C++</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-code"></i>
+                Code Execution Explained
+            </h1>
+            <p class="subtitle">Understanding what happens when you run code in different programming languages</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#java">Java</a></li>
+                <li><a href="#python">Python</a></li>
+                <li><a href="#c">C</a></li>
+                <li><a href="#cpp">C++</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>Overview</h2>
+                <p class="lead">
+                    When you write code in any programming language, it goes through several stages before it can actually execute. 
+                    Understanding these stages helps you write better code and debug more effectively.
+                </p>
+                <div class="execution-flow">
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>Source Code</h3>
+                        <p>Write your code in a text editor</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Compilation/Interpretation</h3>
+                        <p>Convert to machine code or bytecode</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Execution</h3>
+                        <p>Run the program and get results</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="java" class="section language-section">
+            <div class="container">
+                <div class="language-header">
+                    <div class="language-icon java-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div>
+                        <h2>Java</h2>
+                        <p class="language-description">Write Once, Run Anywhere - Platform Independent</p>
+                    </div>
+                </div>
+                
+                <div class="execution-steps">
+                    <div class="step">
+                        <h3>1. Compilation</h3>
+                        <p>Java source code (.java) is compiled by the Java Compiler (javac) into bytecode (.class files).</p>
+                        <div class="code-example">
+                            <code>javac HelloWorld.java → HelloWorld.class</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>2. Bytecode Generation</h3>
+                        <p>The bytecode is platform-independent and contains instructions for the Java Virtual Machine (JVM).</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>3. JVM Execution</h3>
+                        <p>The JVM interprets the bytecode and converts it to native machine code at runtime using Just-In-Time (JIT) compilation.</p>
+                        <div class="code-example">
+                            <code>java HelloWorld</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>4. Runtime</h3>
+                        <p>JVM manages memory, garbage collection, and provides platform abstraction.</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Advantages</h4>
+                        <ul>
+                            <li>Platform independent</li>
+                            <li>Automatic memory management</li>
+                            <li>Rich standard library</li>
+                            <li>Strong type safety</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Disadvantages</h4>
+                        <ul>
+                            <li>Slower startup time</li>
+                            <li>Higher memory usage</li>
+                            <li>JVM dependency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="python" class="section language-section">
+            <div class="container">
+                <div class="language-header">
+                    <div class="language-icon python-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div>
+                        <h2>Python</h2>
+                        <p class="language-description">Interpreted, High-Level Programming Language</p>
+                    </div>
+                </div>
+                
+                <div class="execution-steps">
+                    <div class="step">
+                        <h3>1. Source Code</h3>
+                        <p>Python source code (.py) is written in plain text and doesn't require explicit compilation.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>2. Interpretation</h3>
+                        <p>The Python interpreter reads the source code line by line and converts it to bytecode internally.</p>
+                        <div class="code-example">
+                            <code>python script.py</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>3. Bytecode Generation</h3>
+                        <p>Python creates .pyc files (bytecode) for imported modules to speed up future imports.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>4. Execution</h3>
+                        <p>The Python Virtual Machine (PVM) executes the bytecode instructions.</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Advantages</h4>
+                        <ul>
+                            <li>Simple and readable syntax</li>
+                            <li>No compilation step</li>
+                            <li>Extensive libraries</li>
+                            <li>Rapid development</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Disadvantages</h4>
+                        <ul>
+                            <li>Slower execution speed</li>
+                            <li>Global Interpreter Lock (GIL)</li>
+                            <li>Higher memory usage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="c" class="section language-section">
+            <div class="container">
+                <div class="language-header">
+                    <div class="language-icon c-icon">
+                        <i class="fas fa-copyright"></i>
+                    </div>
+                    <div>
+                        <h2>C</h2>
+                        <p class="language-description">Low-Level, Compiled Programming Language</p>
+                    </div>
+                </div>
+                
+                <div class="execution-steps">
+                    <div class="step">
+                        <h3>1. Preprocessing</h3>
+                        <p>The C preprocessor handles directives like #include, #define, and macro expansions.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>2. Compilation</h3>
+                        <p>The C compiler (gcc, clang) converts source code (.c) to assembly language (.s).</p>
+                        <div class="code-example">
+                            <code>gcc -S program.c → program.s</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>3. Assembly</h3>
+                        <p>Assembly code is converted to object code (.o) containing machine instructions.</p>
+                        <div class="code-example">
+                            <code>gcc -c program.c → program.o</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>4. Linking</h3>
+                        <p>The linker combines object files and libraries to create an executable (.exe on Windows, binary on Unix).</p>
+                        <div class="code-example">
+                            <code>gcc program.o -o program</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>5. Execution</h3>
+                        <p>The operating system loads the executable into memory and runs it directly.</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Advantages</h4>
+                        <ul>
+                            <li>High performance</li>
+                            <li>Direct hardware access</li>
+                            <li>Small memory footprint</li>
+                            <li>Portable across platforms</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Disadvantages</h4>
+                        <ul>
+                            <li>Manual memory management</li>
+                            <li>No built-in safety features</li>
+                            <li>Platform-specific compilation</li>
+                            <li>More complex syntax</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp" class="section language-section">
+            <div class="container">
+                <div class="language-header">
+                    <div class="language-icon cpp-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div>
+                        <h2>C++</h2>
+                        <p class="language-description">Object-Oriented Extension of C</p>
+                    </div>
+                </div>
+                
+                <div class="execution-steps">
+                    <div class="step">
+                        <h3>1. Preprocessing</h3>
+                        <p>Similar to C, but with additional C++-specific preprocessing directives.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>2. Compilation</h3>
+                        <p>The C++ compiler (g++, clang++) processes C++ source code (.cpp, .cc) to assembly.</p>
+                        <div class="code-example">
+                            <code>g++ -S program.cpp → program.s</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>3. Assembly & Object Code</h3>
+                        <p>Assembly code is converted to object code with C++ name mangling for function overloading.</p>
+                        <div class="code-example">
+                            <code>g++ -c program.cpp → program.o</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>4. Linking</h3>
+                        <p>Linker combines object files and C++ standard libraries to create executable.</p>
+                        <div class="code-example">
+                            <code>g++ program.o -o program</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>5. Runtime</h3>
+                        <p>Executable runs with C++ runtime support for constructors, destructors, and exception handling.</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Advantages</h4>
+                        <ul>
+                            <li>High performance like C</li>
+                            <li>Object-oriented features</li>
+                            <li>Template metaprogramming</li>
+                            <li>RAII resource management</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Disadvantages</h4>
+                        <ul>
+                            <li>Complex syntax</li>
+                            <li>Long compilation times</li>
+                            <li>Manual memory management</li>
+                            <li>Steep learning curve</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="section">
+            <div class="container">
+                <h2>Language Comparison</h2>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>Compilation Type</th>
+                                <th>Execution Speed</th>
+                                <th>Memory Management</th>
+                                <th>Platform Dependency</th>
+                                <th>Development Speed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Java</strong></td>
+                                <td>Compiled to Bytecode</td>
+                                <td>Fast (JIT)</td>
+                                <td>Automatic (GC)</td>
+                                <td>Platform Independent</td>
+                                <td>Fast</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Python</strong></td>
+                                <td>Interpreted</td>
+                                <td>Slow</td>
+                                <td>Automatic (GC)</td>
+                                <td>Platform Independent</td>
+                                <td>Very Fast</td>
+                            </tr>
+                            <tr>
+                                <td><strong>C</strong></td>
+                                <td>Compiled to Native</td>
+                                <td>Very Fast</td>
+                                <td>Manual</td>
+                                <td>Platform Dependent</td>
+                                <td>Slow</td>
+                            </tr>
+                            <tr>
+                                <td><strong>C++</strong></td>
+                                <td>Compiled to Native</td>
+                                <td>Very Fast</td>
+                                <td>Manual + RAII</td>
+                                <td>Platform Dependent</td>
+                                <td>Slow</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Code Execution Explained. Learn how different programming languages work under the hood!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
